@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ModelMapperConfig {
 
+	// Bean utilizado para instanciação do modelMapper
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();

@@ -1,5 +1,6 @@
 package br.com.testeattus.model.projections;
 
+//Classe que irá ser usada para retornar os dados da pessoa cadastrada, conversao de pessoa para ResumoPessoa
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

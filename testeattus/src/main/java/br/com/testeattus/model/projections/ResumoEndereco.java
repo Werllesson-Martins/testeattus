@@ -1,5 +1,6 @@
 package br.com.testeattus.model.projections;
 
+//Classe que irá ser usada para retornar os dados do Endereco cadastrado, conversao de endereco para ResumoEndereco
 public class ResumoEndereco {
 
 	private Long id;

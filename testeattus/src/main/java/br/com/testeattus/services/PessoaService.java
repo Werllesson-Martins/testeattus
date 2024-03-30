@@ -14,16 +14,20 @@ import br.com.testeattus.repository.PessoaRepository;
 @Service
 public class PessoaService {
 
+	// injeçao de dependencia do repositorio de pessoas
 	@Autowired
 	private PessoaRepository pessoaRepository;
 
+	// injeçao de dependencia do repositorio de enderecos
 	@Autowired
 	private EnderecoService enderecoService;
 
+	// busca todas as pessoas cadastradas no banco de dados
 	public List<Pessoa> buscarTodos() {
 		return pessoaRepository.findAll();
 	}
 
+	// atualiza uma pessoa pelo id
 	public Pessoa atualizar(Long id, Pessoa pessoa) {
 		Pessoa pessoaSalva = buscarPessoaPeloId(id);
 
@@ -31,6 +35,7 @@ public class PessoaService {
 		return pessoaRepository.save(pessoaSalva);
 	}
 
+	// Salva a pessoa e o endereço
 	public Pessoa salvar(Pessoa pessoa) {
 		Pessoa pessoaSalva = pessoaRepository.saveAndFlush(pessoa);
 
@@ -51,6 +56,7 @@ public class PessoaService {
 
 	}
 
+	// busca uma pessoa cadastrada pelo id do banco
 	public Pessoa buscarPessoaPeloId(Long id) {
 		Pessoa pessoaSalva = pessoaRepository.getOne(id);
 		if (pessoaSalva == null) {
