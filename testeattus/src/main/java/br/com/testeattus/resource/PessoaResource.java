@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.testeattus.assembler.ResumoGenericAssembler;
-import br.com.testeattus.model.Endereco;
 import br.com.testeattus.model.Pessoa;
-import br.com.testeattus.model.projections.ResumoEndereco;
 import br.com.testeattus.model.projections.ResumoPessoa;
 import br.com.testeattus.services.EnderecoService;
 import br.com.testeattus.services.PessoaService;
@@ -59,26 +57,6 @@ public class PessoaResource {
 
 		if (pessoaSalva != null) {
 			return resumoGenericAssembler.toModel(pessoaSalva, ResumoPessoa.class);
-		}
-		return null;
-	}
-
-	@PutMapping("/atualizarEndereco/{id}")
-	public ResumoEndereco atualizarEndereco(@PathVariable Long id, @RequestBody @Valid Endereco endereco) {
-		Endereco enderecoSalvo = enderecoService.atualizar(id, endereco);
-
-		if (enderecoSalvo != null) {
-			return resumoGenericAssembler.toModel(enderecoSalvo, ResumoEndereco.class);
-		}
-		return null;
-	}
-
-	@PutMapping("/indicarEnderecoPrincipal/{id}")
-	public ResumoEndereco indicarEnderecoPrincipal(@PathVariable Long id) {
-		Endereco enderecoSalvo = enderecoService.indicarEnderecoPrincipal(id);
-
-		if (enderecoSalvo != null) {
-			return resumoGenericAssembler.toModel(enderecoSalvo, ResumoEndereco.class);
 		}
 		return null;
 	}

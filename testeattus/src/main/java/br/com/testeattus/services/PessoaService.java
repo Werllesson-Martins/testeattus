@@ -59,10 +59,4 @@ public class PessoaService {
 		return pessoaSalva;
 	}
 
-//	public void atualizarPropriedadeAtivo(Long codigo, Boolean ativo) {
-//		Pessoa pessoaSalva = buscarPessoaPeloId(codigo);
-//		pessoaSalva.setAtivo(ativo);
-//		pessoaRepository.save(pessoaSalva);
-//	}
-
 }

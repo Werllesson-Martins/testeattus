@@ -13,14 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 @Entity
 @Table(name = "endereco")
-@JsonInclude(content = Include.NON_EMPTY)
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Endereco implements Serializable {
 
 	/**

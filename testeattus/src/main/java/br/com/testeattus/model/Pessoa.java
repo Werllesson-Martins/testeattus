@@ -16,14 +16,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 @Entity
 @Table(name = "pessoa")
-@JsonInclude(content = Include.NON_EMPTY)
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Pessoa implements Serializable {
 
 	/**
