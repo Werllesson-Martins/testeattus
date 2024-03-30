@@ -51,7 +51,7 @@ public class Endereco implements Serializable {
 	@Column(name = "endereco_principal")
 	private Boolean enderecoPrincipal;
 
-	@JoinColumn(name = "id_pessoa")
+	@JoinColumn(name = "pessoa")
 	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Pessoa pessoa;
